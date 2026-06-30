@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعوة زفاف</title>
+    <title>دعوة خطوبة</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -22,7 +22,6 @@
         <source src="music/wedding.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Music Button -->
     <button id="musicBtn" class="music-btn">
         <i class="fa-solid fa-volume-xmark"></i>
     </button>
@@ -31,19 +30,21 @@
 
         <div class="card" id="card">
 
-            <!-- Front Side -->
+            <!-- FRONT -->
             <div class="front">
-
-                <h1>دعوة زفاف</h1>
 
                 <div class="flower">🌹</div>
 
-                <h2>إيميلي</h2>
+                <h1>دعوة خطوبة</h1>
+
+                <h2>محمد</h2>
+
                 <h3>♥</h3>
-                <h2>جيمس</h2>
+
+                <h2>كريمة أبو مراد</h2>
 
                 <p class="front-text">
-                    بكل حب نتشرف بدعوتكم لمشاركتنا أجمل لحظات حياتنا
+                    بكل الحب والسعادة ندعوكم لمشاركتنا هذه المناسبة المباركة
                 </p>
 
                 <button id="openBtn">
@@ -52,44 +53,53 @@
 
             </div>
 
-            <!-- Back Side -->
+            <!-- BACK -->
             <div class="back">
 
-                <section>
-                    <h1>أهلاً وسهلاً بكم</h1>
-                    <p>يشرفنا حضوركم لمشاركتنا فرحة زفافنا</p>
-                </section>
+                <div class="blessing">
+                    بارك الله لهما وبارك عليهما وجمع بينهما بخير
+                </div>
 
-                <section>
-                    <h2>📅 الموعد</h2>
-                    <h3>السبت</h3>
-                    <h3>28 أغسطس 2027</h3>
-                    <p>04:00 مساءً</p>
-                </section>
+                <div class="verse">
+                    ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ
+                    أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ
+                    مَوَدَّةً وَرَحْمَةً ﴾
+                    <span>صدق الله العظيم</span>
+                </div>
 
-                <section>
-                    <h2>📍 المكان</h2>
-                    <p>قاعة رويال جاردن</p>
+                <section class="invitation-text">
 
-                    <a
-                        href="https://maps.google.com"
-                        target="_blank">
-                        عرض الموقع
-                    </a>
+                    <h1>دعوة خطوبة</h1>
+
+                    <p>
+                        يتشرف أبناء المرحوم
+                        <strong>أحمد البدوي (أبو إبراهيم)</strong>
+                        والسيد
+                        <strong>مصطفى شبيب (أبو مراد)</strong>
+                        بدعوتكم الكريمة لحضور حفل خطوبة
+                    </p>
+
+                    <h2>
+                        الشاب محمد
+                        <span>♥</span>
+                        الآنسة كريمة أبو مراد
+                    </h2>
+
+                    <p>
+                        وذلك بمشيئة الله تعالى يوم
+                        <strong>السبت الموافق 11 / 07 / 2026</strong>
+                    </p>
+
+                    <p>
+                        وبحضوركم تكتمل فرحتنا وتزداد مناسبتنا بهجةً وسروراً،
+                        ونسعد بمشاركتكم لنا هذه اللحظات المباركة.
+                    </p>
+
                 </section>
 
                 <section>
                     <h2>⏳ العد التنازلي</h2>
                     <div id="countdown"></div>
-                </section>
-
-                <section>
-                    <h2>📸 صورنا</h2>
-
-                    <div class="gallery">
-                        <img src="images/bride.jpg" alt="Bride">
-                        <img src="images/groom.jpg" alt="Groom">
-                    </div>
                 </section>
 
             </div>
