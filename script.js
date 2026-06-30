@@ -6,8 +6,6 @@ const musicBtn = document.getElementById("musicBtn");
 
 let opened = false;
 
-/* OPEN CARD */
-
 openBtn.addEventListener("click", () => {
 
     if (opened) return;
@@ -21,12 +19,8 @@ openBtn.addEventListener("click", () => {
             musicBtn.innerHTML =
                 '<i class="fa-solid fa-volume-high"></i>';
         })
-        .catch(() => {
-            console.log("Audio playback blocked.");
-        });
+        .catch(() => {});
 });
-
-/* MUSIC BUTTON */
 
 musicBtn.addEventListener("click", () => {
 
@@ -46,9 +40,9 @@ musicBtn.addEventListener("click", () => {
     }
 });
 
-/* COUNTDOWN */
-
-const eventDate = new Date("July 11, 2026 19:00:00").getTime();
+const eventDate = new Date(
+    "July 11, 2026 19:00:00"
+).getTime();
 
 function updateCountdown() {
 
@@ -63,22 +57,26 @@ function updateCountdown() {
         return;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
+    const hours =
+        Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
 
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
+    const minutes =
+        Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
 
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
-    );
+    const seconds =
+        Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
 
     document.getElementById("countdown").innerHTML =
         `${days} يوم • ${hours} ساعة • ${minutes} دقيقة • ${seconds} ثانية`;
