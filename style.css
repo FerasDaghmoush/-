@@ -73,3 +73,35 @@ border-radius:15px;
 margin:10px;
 
 }
+
+#card{
+
+    background:white;
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
+
+    overflow:hidden;
+
+}
+
+section{
+
+    padding:60px 40px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+h2{
+
+    color:#b76e79;
+
+    font-size:32px;
+
+}
