@@ -1,36 +1,47 @@
-const openBtn = document.getElementById("openBtn");
-const card = document.getElementById("card");
-const music = document.getElementById("bgMusic");
+const card=document.getElementById("card");
 
-openBtn.addEventListener("click", function () {
+const left=document.querySelector(".left");
 
-    card.style.display = "block";
+const right=document.querySelector(".right");
 
-    music.play().catch(function (error) {
-        console.log("Music could not start:", error);
-    });
+const inside=document.querySelector(".inside");
 
-    window.scrollTo({
-        top: window.innerHeight,
-        behavior: "smooth"
-    });
+const music=document.getElementById("bgMusic");
 
-});
+document.getElementById("openBtn").onclick=function(){
 
-const wedding = new Date("August 28, 2027 16:00:00").getTime();
+music.play();
 
-setInterval(function () {
+left.style.transform="rotateY(-170deg)";
 
-    let now = new Date().getTime();
+right.style.transform="rotateY(170deg)";
 
-    let diff = wedding - now;
+setTimeout(()=>{
 
-    let d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    let h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let m = Math.floor((diff % (1000 * 60 * 60)) / 60000);
-    let s = Math.floor((diff % 60000) / 1000);
+inside.style.opacity="1";
 
-    document.getElementById("countdown").innerHTML =
-        `${d} يوم ${h} ساعة ${m} دقيقة ${s} ثانية`;
+},1200);
 
-}, 1000);
+};
+
+const wedding=new Date("August 28,2027 16:00:00").getTime();
+
+setInterval(()=>{
+
+let now=new Date().getTime();
+
+let diff=wedding-now;
+
+let d=Math.floor(diff/(1000*60*60*24));
+
+let h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+let m=Math.floor((diff%(1000*60*60))/60000);
+
+let s=Math.floor((diff%(60000))/1000);
+
+document.getElementById("countdown").innerHTML=
+
+`${d} يوم ${h} ساعة ${m} دقيقة ${s} ثانية`;
+
+},1000);
