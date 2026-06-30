@@ -41,7 +41,7 @@ musicBtn.addEventListener("click", () => {
 });
 
 const eventDate = new Date(
-    "July 11, 2026 19:00:00"
+    "July 10, 2026 19:00:00"
 ).getTime();
 
 function updateCountdown() {
