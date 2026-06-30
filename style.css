@@ -24,7 +24,7 @@ body {
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.45);
 }
 
 /* Scene */
@@ -46,8 +46,8 @@ body {
 /* Card */
 
 .card {
-    width: 850px;
-    height: 600px;
+    width: 900px;
+    height: 650px;
     position: relative;
 
     transform-style: preserve-3d;
@@ -60,7 +60,7 @@ body {
     transform: rotateY(180deg);
 }
 
-/* Front + Back */
+/* Sides */
 
 .front,
 .back {
@@ -77,7 +77,8 @@ body {
 /* Front */
 
 .front {
-    background: #f8f2e8;
+    background: linear-gradient(135deg, #fdf8f0, #f6efe3);
+
     border: 2px solid #d4b06a;
 
     display: flex;
@@ -89,82 +90,130 @@ body {
     text-align: center;
 }
 
+.flower {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
 .front h1 {
+    font-family: 'Amiri', serif;
     font-size: 60px;
     color: #b78b44;
-    font-family: 'Amiri', serif;
+    margin-bottom: 20px;
 }
 
 .front h2 {
-    margin-top: 10px;
     font-size: 40px;
+    color: #444;
 }
 
 .front h3 {
-    font-size: 35px;
     color: #b76e79;
-    margin: 10px 0;
+    font-size: 38px;
+    margin: 12px 0;
 }
 
 .front-text {
     margin-top: 25px;
-    max-width: 500px;
+    font-size: 22px;
     line-height: 2;
-    font-size: 21px;
-}
-
-.flower {
-    font-size: 55px;
-    margin: 15px 0;
+    max-width: 550px;
+    color: #555;
 }
 
 /* Back */
 
 .back {
-    background: white;
+    background: #ffffff;
     transform: rotateY(180deg);
 
     overflow-y: auto;
-    padding: 60px;
+    padding: 50px;
     text-align: center;
 }
 
-.back section {
-    margin-bottom: 60px;
-}
-
-.back h1 {
+.blessing {
     font-family: 'Amiri', serif;
+    font-size: 34px;
     color: #b78b44;
-    font-size: 55px;
+    line-height: 1.8;
+    margin-bottom: 25px;
 }
 
-.back h2 {
+.verse {
+    font-family: 'Amiri', serif;
+    font-size: 28px;
+    color: #666;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.verse span {
+    display: block;
+    margin-top: 10px;
     color: #b76e79;
-    font-size: 34px;
+    font-size: 20px;
+}
+
+.invitation-text {
+    max-width: 760px;
+    margin: auto;
+}
+
+.invitation-text h1 {
+    font-family: 'Amiri', serif;
+    font-size: 50px;
+    color: #b78b44;
+    margin-bottom: 25px;
+}
+
+.invitation-text h2 {
+    font-size: 40px;
+    color: #b76e79;
+    margin: 30px 0;
+}
+
+.invitation-text h2 span {
+    margin: 0 15px;
+    color: #b78b44;
+}
+
+.invitation-text p {
+    font-size: 24px;
+    line-height: 2.2;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-top: 45px;
+}
+
+section h2 {
+    color: #b76e79;
     margin-bottom: 15px;
 }
 
-.back h3 {
-    margin: 10px 0;
+#countdown {
+    font-size: 30px;
+    color: #b76e79;
+    font-weight: bold;
 }
 
-.back p {
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-/* Button */
+/* Buttons */
 
 button {
     margin-top: 30px;
+
     padding: 16px 40px;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
 
     background: #b76e79;
     color: white;
+
+    border: none;
+    border-radius: 40px;
+
+    cursor: pointer;
 
     font-size: 20px;
 
@@ -174,43 +223,6 @@ button {
 button:hover {
     transform: scale(1.05);
     background: #9b4f5d;
-}
-
-/* Link */
-
-a {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: white;
-    background: #b76e79;
-    padding: 12px 25px;
-    border-radius: 30px;
-}
-
-/* Gallery */
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 220px;
-    border-radius: 18px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.2);
-}
-
-/* Countdown */
-
-#countdown {
-    font-size: 30px;
-    font-weight: bold;
-    color: #b76e79;
-    margin-top: 20px;
 }
 
 /* Music Button */
@@ -224,16 +236,17 @@ a {
     height: 55px;
 
     border-radius: 50%;
+
     margin: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    z-index: 9999;
+    background: rgba(255, 255, 255, .92);
 
-    background: rgba(255,255,255,.92);
     color: #333;
+    z-index: 9999;
 }
 
 /* Mobile */
@@ -242,7 +255,7 @@ a {
 
     .card {
         width: 95%;
-        height: 85vh;
+        height: 88vh;
     }
 
     .front h1 {
@@ -253,11 +266,27 @@ a {
         font-size: 28px;
     }
 
-    .back {
-        padding: 30px;
+    .blessing {
+        font-size: 24px;
     }
 
-    .gallery img {
-        width: 150px;
+    .verse {
+        font-size: 22px;
+    }
+
+    .invitation-text h1 {
+        font-size: 36px;
+    }
+
+    .invitation-text h2 {
+        font-size: 28px;
+    }
+
+    .invitation-text p {
+        font-size: 20px;
+    }
+
+    .back {
+        padding: 25px;
     }
 }
