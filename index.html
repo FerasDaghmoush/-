@@ -15,82 +15,91 @@
 
 <body>
 
-<div class="background"></div>
-<div class="overlay"></div>
+    <div class="background"></div>
+    <div class="overlay"></div>
 
-<audio id="bgMusic" loop preload="auto">
-    <source src="music/wedding.mp3" type="audio/mpeg">
-</audio>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music/wedding.mp3" type="audio/mpeg">
+    </audio>
 
-<!-- MUSIC BUTTON -->
-<button id="musicBtn" class="music-btn">
-    <i class="fa-solid fa-volume-xmark"></i>
-</button>
+    <!-- Music Button -->
+    <button id="musicBtn" class="music-btn">
+        <i class="fa-solid fa-volume-xmark"></i>
+    </button>
 
-<div class="scene">
+    <div class="scene">
 
-    <div class="card" id="card">
+        <div class="card" id="card">
 
-        <!-- LEFT COVER -->
-        <div class="cover left">
-            <div class="cover-content">
+            <!-- Front Side -->
+            <div class="front">
+
                 <h1>دعوة زفاف</h1>
+
                 <div class="flower">🌹</div>
+
                 <h2>إيميلي</h2>
                 <h3>♥</h3>
                 <h2>جيمس</h2>
+
+                <p class="front-text">
+                    بكل حب نتشرف بدعوتكم لمشاركتنا أجمل لحظات حياتنا
+                </p>
+
+                <button id="openBtn">
+                    افتح الدعوة
+                </button>
+
             </div>
-        </div>
 
-        <!-- RIGHT COVER -->
-        <div class="cover right">
-            <div class="cover-content">
-                <h2>بكل حب</h2>
-                <p>نتشرف بدعوتكم لمشاركتنا أجمل لحظات حياتنا</p>
+            <!-- Back Side -->
+            <div class="back">
 
-                <button id="openBtn">افتح الدعوة</button>
+                <section>
+                    <h1>أهلاً وسهلاً بكم</h1>
+                    <p>يشرفنا حضوركم لمشاركتنا فرحة زفافنا</p>
+                </section>
+
+                <section>
+                    <h2>📅 الموعد</h2>
+                    <h3>السبت</h3>
+                    <h3>28 أغسطس 2027</h3>
+                    <p>04:00 مساءً</p>
+                </section>
+
+                <section>
+                    <h2>📍 المكان</h2>
+                    <p>قاعة رويال جاردن</p>
+
+                    <a
+                        href="https://maps.google.com"
+                        target="_blank">
+                        عرض الموقع
+                    </a>
+                </section>
+
+                <section>
+                    <h2>⏳ العد التنازلي</h2>
+                    <div id="countdown"></div>
+                </section>
+
+                <section>
+                    <h2>📸 صورنا</h2>
+
+                    <div class="gallery">
+                        <img src="images/bride.jpg" alt="Bride">
+                        <img src="images/groom.jpg" alt="Groom">
+                    </div>
+                </section>
+
             </div>
-        </div>
-
-        <!-- INSIDE -->
-        <div class="inside">
-
-            <section>
-                <h1>أهلاً وسهلاً بكم</h1>
-                <p>يشرفنا حضوركم لمشاركتنا فرحة زفافنا</p>
-            </section>
-
-            <section>
-                <h2>📅 الموعد</h2>
-                <h3>السبت</h3>
-                <h3>28 أغسطس 2027</h3>
-                <p>4:00 مساءً</p>
-            </section>
-
-            <section>
-                <h2>📍 المكان</h2>
-                <p>قاعة رويال جاردن</p>
-                <a href="https://maps.google.com" target="_blank">عرض الموقع</a>
-            </section>
-
-            <section>
-                <h2>⏳ العد التنازلي</h2>
-                <div id="countdown"></div>
-            </section>
-
-            <section>
-                <h2>📸 صورنا</h2>
-                <div class="gallery">
-                    <img src="images/bride.jpg">
-                    <img src="images/groom.jpg">
-                </div>
-            </section>
 
         </div>
+
     </div>
-</div>
 
-<script src="/wedding/script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
