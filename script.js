@@ -1,3 +1,4 @@
+alert("JS LOADED");
 console.log("SCRIPT IS CONNECTED");
 
 document.addEventListener("DOMContentLoaded", () => {
