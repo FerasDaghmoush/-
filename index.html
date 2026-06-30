@@ -1,116 +1,123 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Wedding</title>
+    <title>دعوة زفاف</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="hero">
+    <!-- الصفحة الرئيسية -->
 
-<h1>Emily & James</h1>
+    <div class="hero">
 
-<p>Together with our families</p>
+        <h1>إيميلي & جيمس</h1>
 
-<h2>Invite You To Celebrate Our Wedding</h2>
+        <p>يتشرفان بدعوتكم</p>
 
-<button id="openBtn">
-Open Invitation
-</button>
+        <h2>لمشاركتهم فرحة حفل زفافهما</h2>
 
-</div>
+        <button id="openBtn">
+            افتح الدعوة
+        </button>
 
-<div id="card" class="hidden">
+    </div>
 
-<section>
+    <!-- بطاقة الدعوة -->
 
-<h2>Saturday</h2>
+    <div id="card" class="hidden">
 
-<h3>August 28, 2027</h3>
+        <section>
 
-<p>4:00 PM</p>
+            <h2>موعد الزفاف</h2>
 
-</section>
+            <h3>السبت</h3>
 
-<section>
+            <p>28 أغسطس 2027</p>
 
-<h2>Venue</h2>
+            <p>الساعة 4:00 مساءً</p>
 
-<p>Royal Garden Hall</p>
+        </section>
 
-<a href="https://maps.google.com" target="_blank">
-Open Google Maps
-</a>
+        <section>
 
-</section>
+            <h2>مكان الحفل</h2>
 
-<section>
+            <p>قاعة رويال جاردن</p>
 
-<h2>Countdown</h2>
+            <a href="https://maps.google.com" target="_blank">
+                فتح الموقع على خرائط جوجل
+            </a>
 
-<div id="countdown"></div>
+        </section>
 
-</section>
+        <section>
 
-<section>
+            <h2>العد التنازلي</h2>
 
-<h2>Gallery</h2>
+            <div id="countdown"></div>
 
-<img src="images/bride.jpg">
+        </section>
 
-<img src="images/groom.jpg">
+        <section>
 
-</section>
+            <h2>معرض الصور</h2>
 
-<section>
+            <img src="images/bride.jpg" alt="Bride">
 
-<h2>RSVP</h2>
+            <img src="images/groom.jpg" alt="Groom">
 
-<form>
+        </section>
 
-<input
-type="text"
-placeholder="Your Name">
+        <section>
 
-<input
-type="email"
-placeholder="Email">
+            <h2>تأكيد الحضور</h2>
 
-<select>
+            <form>
 
-<option>Attending</option>
+                <input type="text" placeholder="الاسم">
 
-<option>Not Attending</option>
+                <input type="email" placeholder="البريد الإلكتروني">
 
-</select>
+                <select>
 
-<button>
+                    <option>سأحضر</option>
 
-Send RSVP
+                    <option>لن أتمكن من الحضور</option>
 
-</button>
+                </select>
 
-</form>
+                <br><br>
 
-</section>
+                <button type="submit">
+                    إرسال
+                </button>
 
-</div>
+            </form>
 
-<script src="script.js"></script>
-<audio id="bgMusic" loop>
-    <source src="music/wedding.mp3" type="audio/mp3">
-</audio>
+        </section>
+
+    </div>
+
+    <!-- موسيقى الخلفية -->
+
+    <audio id="bgMusic" preload="auto" loop>
+        <source src="music/wedding.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
