@@ -1,44 +1,30 @@
 const card = document.getElementById("card");
 const openBtn = document.getElementById("openBtn");
 
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+const inside = document.querySelector(".inside");
+
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-let isPlaying = false;
+let opened = false;
 
 /* OPEN CARD */
-openBtn.onclick = function () {
-    card.classList.add("open");
-    music.play();
-    isPlaying = true;
-    musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
-};
+openBtn.addEventListener("click", () => {
+    if (opened) return;
+    opened = true;
 
-/* MUSIC TOGGLE */
-musicBtn.onclick = function () {
-    if (music.paused) {
-        music.play();
-        musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
-        isPlaying = true;
-    } else {
-        music.pause();
-        musicBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
-        isPlaying = false;
-    }
-};
+    // animate covers
+    left.style.transform = "rotateY(-180deg)";
+    right.style.transform = "rotateY(180deg)";
 
-/* COUNTDOWN */
-const wedding = new Date("August 28, 2027 16:00:00").getTime();
+    // show inside AFTER animation starts
+    setTimeout(() => {
+        inside.style.opacity = "1";
+        inside.style.zIndex = "10";
+    }, 1200);
 
-setInterval(() => {
-    let now = new Date().getTime();
-    let diff = wedding - now;
-
-    let d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    let h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let m = Math.floor((diff % (1000 * 60 * 60)) / 60000);
-    let s = Math.floor((diff % 60000) / 1000);
-
-    document.getElementById("countdown").innerHTML =
-        `${d} يوم ${h} ساعة ${m} دقيقة ${s} ثانية`;
-}, 1000);
+    // play music
+    music.play().catch(() => {});
+});
