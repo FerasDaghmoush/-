@@ -6,7 +6,7 @@ const musicBtn = document.getElementById("musicBtn");
 
 let opened = false;
 
-/* OPEN INVITATION */
+/* OPEN CARD */
 
 openBtn.addEventListener("click", () => {
 
@@ -16,15 +16,17 @@ openBtn.addEventListener("click", () => {
 
     card.classList.add("open");
 
-    music.play().then(() => {
-        musicBtn.innerHTML =
-            '<i class="fa-solid fa-volume-high"></i>';
-    }).catch(() => {
-        console.log("Audio playback blocked.");
-    });
+    music.play()
+        .then(() => {
+            musicBtn.innerHTML =
+                '<i class="fa-solid fa-volume-high"></i>';
+        })
+        .catch(() => {
+            console.log("Audio playback blocked.");
+        });
 });
 
-/* MUSIC TOGGLE */
+/* MUSIC BUTTON */
 
 musicBtn.addEventListener("click", () => {
 
@@ -46,18 +48,17 @@ musicBtn.addEventListener("click", () => {
 
 /* COUNTDOWN */
 
-const weddingDate = new Date("August 28, 2027 16:00:00").getTime();
+const eventDate = new Date("July 11, 2026 19:00:00").getTime();
 
 function updateCountdown() {
 
     const now = new Date().getTime();
-
-    const distance = weddingDate - now;
+    const distance = eventDate - now;
 
     if (distance <= 0) {
 
         document.getElementById("countdown").innerHTML =
-            "🎉 لقد حان موعد الزفاف";
+            "🎉 حان موعد الحفل";
 
         return;
     }
@@ -84,5 +85,4 @@ function updateCountdown() {
 }
 
 updateCountdown();
-
 setInterval(updateCountdown, 1000);
