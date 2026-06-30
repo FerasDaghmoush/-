@@ -2,163 +2,95 @@
 <html lang="ar" dir="rtl">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>دعوة زفاف</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
 <div class="background"></div>
-
 <div class="overlay"></div>
 
 <audio id="bgMusic" loop preload="auto">
     <source src="music/wedding.mp3" type="audio/mpeg">
 </audio>
 
+<!-- MUSIC BUTTON -->
 <button id="musicBtn" class="music-btn">
-
-<i class="fa-solid fa-volume-high"></i>
-
+    <i class="fa-solid fa-volume-xmark"></i>
 </button>
-
 
 <div class="scene">
 
     <div class="card" id="card">
 
         <!-- LEFT COVER -->
-
         <div class="cover left">
-
             <div class="cover-content">
-
                 <h1>دعوة زفاف</h1>
-
                 <div class="flower">🌹</div>
-
                 <h2>إيميلي</h2>
-
                 <h3>♥</h3>
-
                 <h2>جيمس</h2>
-
             </div>
-
         </div>
 
         <!-- RIGHT COVER -->
-
         <div class="cover right">
-
             <div class="cover-content">
-
                 <h2>بكل حب</h2>
+                <p>نتشرف بدعوتكم لمشاركتنا أجمل لحظات حياتنا</p>
 
-                <p>
-
-                    نتشرف بدعوتكم
-
-                    لمشاركتنا أجمل لحظات حياتنا
-
-                </p>
-
-                <button id="openBtn">
-
-                    افتح الدعوة
-
-                </button>
-
+                <button id="openBtn">افتح الدعوة</button>
             </div>
-
         </div>
 
         <!-- INSIDE -->
-
         <div class="inside">
 
             <section>
-
                 <h1>أهلاً وسهلاً بكم</h1>
-
-                <p>
-
-                    يشرفنا حضوركم
-
-                    لمشاركتنا فرحة زفافنا
-
-                </p>
-
+                <p>يشرفنا حضوركم لمشاركتنا فرحة زفافنا</p>
             </section>
 
             <section>
-
                 <h2>📅 الموعد</h2>
-
                 <h3>السبت</h3>
-
                 <h3>28 أغسطس 2027</h3>
-
                 <p>4:00 مساءً</p>
-
             </section>
 
             <section>
-
                 <h2>📍 المكان</h2>
-
                 <p>قاعة رويال جاردن</p>
-
-                <a href="https://maps.google.com" target="_blank">
-
-                    عرض الموقع
-
-                </a>
-
+                <a href="https://maps.google.com" target="_blank">عرض الموقع</a>
             </section>
 
             <section>
-
                 <h2>⏳ العد التنازلي</h2>
-
                 <div id="countdown"></div>
-
             </section>
 
             <section>
-
                 <h2>📸 صورنا</h2>
-
                 <div class="gallery">
-
                     <img src="images/bride.jpg">
-
                     <img src="images/groom.jpg">
-
                 </div>
-
             </section>
 
         </div>
-
     </div>
-
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
