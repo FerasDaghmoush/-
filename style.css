@@ -50,9 +50,17 @@ body{
     transition:2s;
 }
 
+.left, .right{
+    transition:2s;
+    backface-visibility:hidden;
+}
+
 /* OPEN ANIMATION */
-.card.open .left{
-    transform: rotateY(-170deg);
+.card{
+    position:relative;
+    width:900px;
+    height:600px;
+    transform-style:preserve-3d;
 }
 
 .card.open .right{
@@ -142,6 +150,7 @@ button:hover{
     opacity:0;
     transition:2s;
     border-radius:12px;
+    z-index:1; /* 🔥 IMPORTANT */
 }
 
 .card.open .inside{
