@@ -16,29 +16,26 @@ body {
 .background {
     position: fixed;
     inset: 0;
-    background: url("images/background.jpg") center center / cover no-repeat;
+    background: url("images/background.jpg") center center/cover no-repeat;
     filter: blur(5px);
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0,0,0,.45);
 }
 
-/* Scene */
+/* Layout */
 
 .scene {
     min-height: 100vh;
-    padding: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 15px;
     perspective: 2500px;
-
     position: relative;
     z-index: 2;
 }
@@ -46,15 +43,12 @@ body {
 /* Card */
 
 .card {
-    width: min(900px, 95vw);
-    height: min(700px, 88vh);
-
     position: relative;
+    width: min(900px, 96vw);
+    height: min(700px, 88vh);
 
     transform-style: preserve-3d;
     transition: transform 1.6s ease;
-
-    border-radius: 24px;
 }
 
 .card.open {
@@ -70,13 +64,19 @@ body {
 
     backface-visibility: hidden;
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, .35);
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
 }
 
-/* Front */
+/* Front Cover */
 
 .front {
-    background: linear-gradient(135deg,#faf4eb,#f5ecdf);
+    background: linear-gradient(
+        135deg,
+        #faf4eb 0%,
+        #f7efe3 100%
+    );
 
     border: 2px solid #d4b06a;
 
@@ -87,101 +87,113 @@ body {
 
     text-align: center;
 
-    padding: 40px;
+    padding: 25px;
 }
 
-.flower {
-    font-size: 60px;
-    margin-bottom: 15px;
+.cover-image {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #d4b06a;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
 }
 
 .front h1 {
     font-family: 'Amiri', serif;
-    font-size: 58px;
     color: #b78b44;
+    font-size: 46px;
+    margin-bottom: 15px;
 }
 
 .front h2 {
-    font-size: 40px;
+    font-size: 28px;
     color: #444;
 }
 
-.front h3 {
-    margin: 10px 0;
-    font-size: 35px;
-    color: #b76e79;
-}
-
 .front-text {
-    max-width: 550px;
-    margin-top: 25px;
-    font-size: 21px;
-    color: #555;
+    margin-top: 18px;
+    max-width: 500px;
+
+    font-size: 18px;
     line-height: 2;
+
+    color: #666;
 }
 
 /* Back */
 
 .back {
     background: #fff;
-
     transform: rotateY(180deg);
-
     overflow-y: auto;
-
     padding: 45px;
-    text-align: center;
 }
 
 .blessing {
+    text-align: center;
     font-family: 'Amiri', serif;
-    font-size: 34px;
+    font-size: 32px;
     color: #b78b44;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
 .verse {
+    text-align: center;
     font-family: 'Amiri', serif;
-    font-size: 26px;
-    line-height: 2;
+    font-size: 24px;
     color: #666;
+    line-height: 2;
     margin-bottom: 35px;
 }
 
 .verse span {
     display: block;
+    margin-top: 10px;
     color: #b76e79;
-    margin-top: 8px;
+}
+
+.invitation-text {
+    text-align: center;
 }
 
 .invitation-text h1 {
     font-family: 'Amiri', serif;
     color: #b78b44;
-    font-size: 46px;
+    font-size: 42px;
     margin-bottom: 20px;
 }
 
 .invitation-text h2 {
-    font-size: 38px;
     color: #b76e79;
-    margin: 25px 0;
+    font-size: 34px;
+    margin: 30px 0;
 }
 
 .invitation-text h2 span {
-    margin: 0 10px;
-    color: #b78b44;
+    padding: 0 8px;
 }
 
 .invitation-text p {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 2.1;
     color: #444;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .countdown-section {
-    margin-top: 40px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .countdown-section h2 {
@@ -193,9 +205,10 @@ body {
     font-size: 28px;
     color: #b76e79;
     font-weight: bold;
+    line-height: 1.8;
 }
 
-/* Buttons */
+/* Button */
 
 button {
     border: none;
@@ -206,17 +219,13 @@ button {
 
     border-radius: 40px;
 
-    padding: 16px 40px;
-
-    font-size: 20px;
-
-    margin-top: 25px;
+    padding: 14px 34px;
+    font-size: 18px;
 
     transition: .3s;
 }
 
 button:hover {
-    background: #9b4f5d;
     transform: scale(1.05);
 }
 
@@ -224,16 +233,13 @@ button:hover {
 
 .music-btn {
     position: fixed;
-
     top: 15px;
     right: 15px;
 
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
 
     border-radius: 50%;
-
-    margin: 0;
 
     display: flex;
     justify-content: center;
@@ -241,56 +247,43 @@ button:hover {
 
     background: rgba(255,255,255,.9);
 
-    color: #333;
-
     z-index: 9999;
 }
 
-/* Mobile First Experience */
+/* Mobile */
 
 @media (max-width: 768px) {
 
-    .scene {
-        padding: 10px;
-    }
-
     .card {
-        width: 96vw;
-        height: 90vh;
-    }
-
-    .front,
-    .back {
-        border-radius: 18px;
+        width: 94vw;
+        height: 78vh;
     }
 
     .front {
-        padding: 25px;
+        padding: 18px;
+    }
+
+    .cover-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
     }
 
     .front h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .front h2 {
-        font-size: 26px;
-    }
-
-    .front h3 {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .front-text {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.8;
     }
 
-    .flower {
-        font-size: 44px;
-    }
-
     .back {
-        padding: 22px;
+        padding: 20px;
     }
 
     .blessing {
@@ -298,30 +291,22 @@ button:hover {
     }
 
     .verse {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .invitation-text h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .invitation-text h2 {
         font-size: 24px;
-        line-height: 1.8;
     }
 
     .invitation-text p {
         font-size: 17px;
-        line-height: 2;
     }
 
     #countdown {
-        font-size: 20px;
-        line-height: 1.8;
-    }
-
-    button {
-        padding: 14px 26px;
-        font-size: 16px;
+        font-size: 18px;
     }
 }
