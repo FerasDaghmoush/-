@@ -64,13 +64,11 @@ body {
 }
 
 .front {
-    background:
-        url("images/carbackground.png") center center / 500px repeat,
-        linear-gradient(
-            135deg,
-            #faf4eb 0%,
-            #f7efe3 100%
-        );
+    background: linear-gradient(
+        135deg,
+        #faf4eb 0%,
+        #f7efe3 100%
+    );
 
     border: 2px solid #d4b06a;
 
@@ -85,9 +83,10 @@ body {
 }
 
 .back {
-    background:
-        url("images/carbackground.png") center center / 500px repeat,
-        #ffffff;
+    background-image: url("images/carbackground.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     transform: rotateY(180deg);
 
