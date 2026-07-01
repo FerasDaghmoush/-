@@ -65,7 +65,7 @@ body {
 
 .front {
     background:
-        url("images/carbackground.png") center center / cover no-repeat,
+        url("images/carbackground.png") center center / 500px repeat,
         linear-gradient(
             135deg,
             #faf4eb 0%,
