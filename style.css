@@ -86,7 +86,7 @@ body {
 
 .back {
     background:
-        url("images/carbackground.png") center center / cover repeat,
+        url("images/carbackground.png") center center / 500px repeat,
         #ffffff;
 
     transform: rotateY(180deg);
