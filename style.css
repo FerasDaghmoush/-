@@ -96,8 +96,8 @@ body {
     padding: 45px;
 }
 
-.front::before,
-.back::before {
+
+.front::before {
     content: "";
     position: absolute;
     inset: 16px;
@@ -105,6 +105,7 @@ body {
     border-radius: 14px;
     pointer-events: none;
 }
+
 
 .cover-image {
     width: 100%;
@@ -313,9 +314,21 @@ button:hover {
         line-height: 1.8;
     }
 
-    .back {
-        padding: 20px;
-    }
+
+.back {
+    background:
+        url("images/carbackground.png") center center / 500px repeat,
+        #ffffff;
+
+    transform: rotateY(180deg);
+
+    overflow-y: auto;
+
+    padding: 45px;
+
+    border: 2px solid #d4b06a;
+}
+
 
     .blessing {
         font-size: 22px;
@@ -341,3 +354,12 @@ button:hover {
         font-size: 18px;
     }
 }
+
+
+.back-content {
+    border: 1px solid rgba(183,139,68,.35);
+    border-radius: 14px;
+    padding: 25px;
+    min-height: 100%;
+}
+
